@@ -38,6 +38,7 @@ const Register = (props) => {
   useEffect(() => {
     if (userInfo) {
       // props.history.push(redirect);
+      alert ("Account created successfully")
       navigate("/");
     }
   }, [navigate, userInfo]);
@@ -59,22 +60,22 @@ const Register = (props) => {
             onChange={(e) => setEmail(e.target.value)}
             type="email"
             required
-            placeholder="email"
+            placeholder="Email"
           />
           <Input
             onChange={(e) => setPassword(e.target.value)}
             type="password"
             required
-            placeholder="password"
+            placeholder="Password"
           />
           <Input
             onChange={(e) => setConfirmPassword(e.target.value)}
             type="password"
             required
-            placeholder="confirm password"
+            placeholder="Confirm password"
           />
           <Button type="submit" disabled={loading}>
-            {loading ? "Hold on...." : "REGISTER"}
+            {loading ? "Hold..." : "REGISTER"}
           </Button>
         </Form>
       </Wrapper>

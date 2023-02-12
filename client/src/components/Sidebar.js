@@ -17,11 +17,11 @@ const Sidebar = ({sidebarOpen,closeSidebar}) => {
                         return <SidebarItem closeSidebar={closeSidebar} key={link.id} {...link}/>
                     })}
                 </SidebarLinks>
-                <Socials>
+                {/* <Socials>
                     {socials.map((social)=>{
                         return <Social  closeSidebar={closeSidebar}key={social.id}{...social}/>
                     })}
-                </Socials>
+                </Socials> */}
             </Aside>
         </SidebarWrapper>
     )
@@ -57,25 +57,25 @@ const Aside=styled.aside`
     /* background:rgba(0,0,0,0.2); */
     background: white;
     padding:40px 30px;
-    color:#FF0075;
+    color:black;
 
 `
-const Socials=styled.div`
-    display:flex;
-    align-self:flex-end;
-    // justify-self:flex-end;
-`
+// const Socials=styled.div`
+//     display:flex;
+//     align-self:flex-end;
+//     // justify-self:flex-end;
+// `
 const Icon=styled.div`
     position:absolute;
     right:0;
     top:0;
-    color:red;
+    color:black;
     cursor:pointer;
     font-size:29px;
-    &:hover{
+    /* &:hover{
         color:dark-red;
-        opacity:0.7
-    }
+        opacity:0.7 */
+    /* } */
 `
 
 

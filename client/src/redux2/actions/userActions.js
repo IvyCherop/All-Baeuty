@@ -1,4 +1,5 @@
 import Axios from "axios";
+import { CLEAR_CART } from "../constants/cartConstants";
 
 import {
   USER_REGISTER_FAIL,
@@ -60,6 +61,6 @@ export const signout = () => async (dispatch) => {
   localStorage.removeItem("userInfo");
   localStorage.removeItem("cartItems");
   localStorage.removeItem("shippingAddress");
-
+dispatch({type: CLEAR_CART})
   dispatch({ type: USER_SIGNOUT });
 };

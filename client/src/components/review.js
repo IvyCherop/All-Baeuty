@@ -18,6 +18,7 @@ const Review = ({ user, reviewername, title, rating }) => {
             );
           })}
       </Rating>
+      {/* stars za comment section */}
       <Comment>{title}</Comment>
     </Wrapper>
   );

@@ -89,7 +89,7 @@ const SingleProduct = () => {
       <Wrapper>
         <ImageContainer>
           <Image src={image}></Image>
-          {freeShipping && <Shipped>Free Shipping</Shipped>}
+          {/* {freeShipping && <Shipped>Free Shipping</Shipped>} */}
         </ImageContainer>
         <InfoContainer>
           <Title>{name}</Title>
@@ -172,9 +172,11 @@ const SingleProduct = () => {
           </BackButton>
           <Text>{`Number of Reviews (${numOfReviews}`}</Text>
 
-          {reviews?.map((review) => {
+          {reviews?.map((review) => { 
             return <Review key={review._id} {...review} />;
           })}
+          {/* each review has an id,....importance ya key */}
+          {/* object spread operato..dots tatu, key value pairs */}
         </Reviews>
       </Wrapper>
     </ProductWrapper>

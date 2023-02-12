@@ -34,20 +34,20 @@ const ShippingInfo = (props) => {
     <Wrapper>
       <Title>Shipping Info</Title>
       <Form onChange={handleChange}>
-        <Input type="text" name="town" required placeholder="Town" />
+        {/* <Input type="text" name="Residential" required placeholder="Residential" /> */}
         <Input
           type="text"
           required
-          name="townaddress"
-          placeholder="Town Address"
+          name="Residential"
+          placeholder="Residential Adress"
         />
 
-        <Input
+        {/* <Input
           type="text"
           name="postaladdress"
           required
           placeholder="Home postal code"
-        />
+        /> */}
         <Button onClick={handleClick}>Continue</Button>
       </Form>
     </Wrapper>

@@ -5,6 +5,7 @@ import { createOrder } from "../redux2/actions/orderActions";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import axios from "axios";
 const PlaceOrder = () => {
   const cart = useSelector((state) => state.cart);
   // const userInfo=useSelector((state)=>state.userSignin)
@@ -13,8 +14,15 @@ const PlaceOrder = () => {
     navigate("/shipping");
   }
   const dispatch = useDispatch();
-  const handleClick = () => {
+  const userInfo = useSelector((state) => state.userSignin.userInfo);
+  const handleClick = async() => {
     dispatch(createOrder(cart?.cartItems, cart?.tax, cart?.shippingFee));
+   const {data}= await axios.post( "http://localhost:5000/api/v1/orders/email","",   {
+    headers: {
+      authorization: `Bearer ${userInfo.token}`,
+    },
+  })
+   console.log(data)
   };
   return (
     <Wrapper>
@@ -24,15 +32,15 @@ const PlaceOrder = () => {
       </Text>
       <ShippingInfo>
         <Header>Delivery Address</Header>
-        <Text>
+        {/* <Text>
           Town: <span>{cart.shippingAddress.town}</span>
         </Text>
         <Text>
           Address: <span>{cart?.shippingAddress?.townaddress}</span>
-        </Text>
+        </Text> */}
         {/* <Text>Home Address: {cart?.shippingAddress?.homeaddress}</Text> */}
         <Text>
-          Postal Address: <span>{cart?.shippingAddress?.postaladdress}</span>
+          Residential  Address: <span>{cart?.shippingAddress?.Residential}</span>
         </Text>
       </ShippingInfo>
       <Payment>

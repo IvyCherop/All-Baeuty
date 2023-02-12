@@ -4,6 +4,34 @@ const Product = require('../models/Product');
 const { StatusCodes } = require('http-status-codes');
 const CustomError = require('../errors');
 const { authorizeUser } = require('../utils');
+const nodemailer = require("nodemailer");
+
+const sendMail = async (req, res) => {
+  
+  var transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 587,
+    auth: {
+      user: "thisisbeautyfull@gmail.com",
+      pass: "binfunhmiamlgknq",
+    },
+  });
+
+  try {
+    let info = await transporter.sendMail({
+      from: "Beauty full thisisbeautyfull@gmail.com",
+      to: req.user.email,
+      subject: "Order placement",
+      text: "Order created successfully",
+      // html:
+    });
+
+    console.log(info);
+    res.status(200).json("Email sent successfully!");
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 
 
@@ -99,4 +127,5 @@ module.exports = {
   getCurrentUserOrders,
   createOrder,
   updateOrder,
+  sendMail,
 };

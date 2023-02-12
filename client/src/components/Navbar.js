@@ -39,7 +39,7 @@ const Navbar = ({ openSidebar }) => {
         </NavToggle>
         <Left>
           <Link to="/">
-            <Logo>All Beauty</Logo>
+            <Logo>Beauty-Full</Logo>
           </Link>
         </Left>
         <Center>
@@ -53,18 +53,8 @@ const Navbar = ({ openSidebar }) => {
           </SearchContainer>
         </Center>
         <Links>
-          {userInfo ? (
-            <LinkTo onClick={handleClick}>Logout</LinkTo>
-          ) : (
-            <>
-              <Link to="/login">
-                <LinkTo>Login</LinkTo>
-              </Link>
-              <Link to="/register">
-                <LinkTo>Register</LinkTo>
-              </Link>
-            </>
-          )}
+        
+          
           <Link to="/contact">
             <LinkTo to="/contact">Contact</LinkTo>
           </Link>
@@ -164,12 +154,12 @@ const NavToggle = styled.div`
 const Logo = styled.h1`
   font-weight: 900;
   cursor: pointer;
-  color: #FDB8C0;
+  color: Black;
   margin-top: 0;
   margin-bottom: 0;
   transition: all 0.2s linear;
   /* text-shadow:1px 5px 10px rgba(0,0,0,0.9) ; */
-  text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.9), 4px 2px 0px #f4f4f4;
+  /* text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.9), 4px 2px 0px black; */
   &:hover {
     transform: scale(1.02);
     /* border:2px solid white; */

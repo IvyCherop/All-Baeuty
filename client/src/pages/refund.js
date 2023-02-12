@@ -5,8 +5,8 @@ const Refund = () => {
     <Container>
       <Wrapper>
         <Title> Returns & Exchanges</Title>
-        <Text>Urembom will gladly exchange an item for another if you wish to exchange a purchased item you are dissatisfied with, within <Span>7 days</Span> from the date of purchase. This excludes offers and any discounts offered at time of purchase.</Text>
-        <Text>Contact us via <ContactSpan>+254778787987</ContactSpan>,or email us at<EmailSpan>urembombeauty@gmail.com</EmailSpan> with your order number within <Span>48 hrs</Span> of receiving the item, to enable us to process the request and get back to you in good time. Please ensure the items are undamaged, original packaging intact, and with original tags attached.</Text>
+        <Text>Beauty-Full will gladly exchange an item for another if you wish to exchange a purchased item you are dissatisfied with, within <Span>7 days</Span> from the date of purchase. This excludes offers and any discounts offered at time of purchase.</Text>
+        <Text>Contact us via <ContactSpan>+254791391022</ContactSpan>,or email us at<EmailSpan href='https://mail.google.com/mail/u/1/#inbox/FMfcgzGrcXkWfZhsjgmtxvqqBGNnLcJD'target="_blank">thisisbeautyfull@gmail.com</EmailSpan> with your order number within <Span>48 hrs</Span> of receiving the item, to enable us to process the request and get back to you in good time. Please ensure the items are undamaged, original packaging intact, and with original tags attached.</Text>
         <Warning>Any damages/distortion nullifies the exchange.</Warning>
 
     </Wrapper>
@@ -15,7 +15,7 @@ const Refund = () => {
   )
 }
 const Container=styled.div`
-  background:pink;
+  background:#FDB8C0;
   width:100vw;
   height:100vh;
   display: flex;
@@ -27,7 +27,7 @@ width:90vw;
 max-width: 600px;
 margin-right: 50px;
 margin-left: 50px;
-color: chocolate;
+color: black;
 font-size: 1.7rem;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 @media screen and (max-width:800px){
@@ -36,7 +36,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 `
 const Title=styled.h1`
-  color:#082032;
+  color:black;
   text-decoration: underline salmon;
   margin-bottom: 10px;
   @media screen and (max-width:800px){
@@ -53,7 +53,7 @@ const Text=styled.h6`
 `
 
 const EmailSpan=styled.a`
-  color: #FF0075;
+  color: crimson;
   padding:0 3px;
   text-decoration: underline;
   cursor: pointer;
@@ -65,10 +65,10 @@ const ContactSpan=styled.span`
 
 const Warning=styled.span`
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color: beige;
+  color: crimson;
 `
 const Span=styled.span`
-  color: brown;
+  color: crimson;
 `
 
 export default Refund

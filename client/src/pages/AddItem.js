@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../redux2/actions/productActions";
+// import  useIsMount  from "../components/Hooks/useMount";
 const CreateProduct = () => {
   const [value, setValue] = useState({});
 
@@ -23,9 +24,20 @@ const CreateProduct = () => {
       navigate("/");
     }
   }, [navigate, userInfo]);
-  if (success) {
-    setValue({});
-  }
+  // if (success) {
+  //   setValue({});
+  // }
+  // const ismount= useIsMount()
+  
+  useEffect(()=>{
+    // if(
+    //   !ismount
+    // ){
+    alert("Product created succesfully")
+  },[
+    success
+  ])
+  // builtinfunction
 
   // console.log(value);
   const handleChange = (e) => {

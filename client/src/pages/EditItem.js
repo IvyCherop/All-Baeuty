@@ -102,7 +102,7 @@ const EditItem = () => {
             <Label htmlFor="">Product Name</Label>
             <Input
               name="name"
-              value={name}
+              value={product?.name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Name"
             />
@@ -111,7 +111,7 @@ const EditItem = () => {
             <Label htmlFor="">Product Price</Label>
             <Input
               name="price"
-              value={price}
+              value={product?.price}
               onChange={(e) => setPrice(e.target.value)}
               placeholder="Price"
             />
@@ -120,6 +120,7 @@ const EditItem = () => {
             <Label htmlFor="">InitialPrice</Label>
             <Input
               placeholder="initial price"
+              value={product?.initialPrice}
               name="initialPrice"
               onChange={(e) => setInitialPrice(e.target.value)}
             />
@@ -129,6 +130,7 @@ const EditItem = () => {
             <Input
               name="company"
               placeholder="company"
+              value={product?.company}
               onChange={(e) => setCompany(e.target.value)}
             />
           </InputWrapper>
@@ -136,7 +138,7 @@ const EditItem = () => {
             <Label htmlFor="">Product Image</Label>
             <Input
               name="image"
-              value={image}
+              value={product?.image}
               onChange={(e) => setImage(e.target.value)}
               placeholder="Image URL"
             />
@@ -145,7 +147,7 @@ const EditItem = () => {
             <Label htmlFor="">Product Category</Label>
             <Input
               name="category"
-              value={category}
+              value={product?.category}
               onChange={(e) => setCategory(e.target.value)}
               placeholder="Category (lowercase)"
             />
@@ -167,7 +169,7 @@ const EditItem = () => {
             <Label htmlFor="">Product Description</Label>
             <TextArea
               name="description"
-              value={description}
+              value={product?.description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Description"
               rows={7}
@@ -244,6 +246,7 @@ const TextArea = styled.textarea`
   margin-bottom: 8px;
   border: 1px solid cadetblue;
   border-radius: 4px;
+  padding: 6px;
 `;
 const InputWrapper = styled.div`
   display: flex;

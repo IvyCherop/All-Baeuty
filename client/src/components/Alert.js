@@ -28,8 +28,8 @@ const AlertContainer = styled.h4`
   width: 60%;
   /* height: 24px; */
   position: absolute;
-  color: white;
-  top: 15vh;
+  color: black;
+  top: 10vh;
   left: 50%;
   transform: translateX(-50%);
 

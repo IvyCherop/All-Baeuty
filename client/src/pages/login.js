@@ -36,7 +36,7 @@ const Login = () => {
       {showAlert && <Alert type="danger" title={error} />}
       <Wrapper>
         <Title>LOGIN</Title>
-        <Logo>All Beauty</Logo>
+        <Logo>Beauty-Full</Logo>
         <Form onSubmit={handleClick}>
           <Input
             type="email"

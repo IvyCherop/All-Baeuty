@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { savePaymentMethod } from "../redux2/actions/cartActions";
 import { useDispatch } from "react-redux";
 const PaymentMethod = () => {
-  const [paymentMethod, setPaymentMethod] = useState("Paypal");
+  const [paymentMethod, setPaymentMethod] = useState("Pay On Delivery");
   const dispatch = useDispatch();
   const handleClick = () => {
     dispatch(savePaymentMethod(paymentMethod));
@@ -12,7 +12,7 @@ const PaymentMethod = () => {
   // console.log(paymentMethod);
   return (
     <Wrapper>
-      <Select>
+      {/* <Select>
         <RadioButton
           name="paymentMethod"
           id="PayPal"
@@ -33,7 +33,7 @@ const PaymentMethod = () => {
           onChange={(e) => setPaymentMethod(e.target.value)}
         />
         <Label htmlFor="mpesa">Pay with Mpesa</Label>
-      </Select>
+      </Select> */}
       <Select>
         <RadioButton
           name="paymentMethod"
@@ -42,7 +42,7 @@ const PaymentMethod = () => {
           required
           onChange={(e) => setPaymentMethod(e.target.value)}
         />
-        <Label htmlFor="mpesa">Pay on Delivery</Label>
+        <Label htmlFor="Pay On Delivery">Pay on Delivery</Label>
       </Select>
       <Link to="/shipping">
         <Button onClick={handleClick}>Continue to Order</Button>

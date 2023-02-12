@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Fade from "react-reveal/Fade";
-import Rotate from "react-reveal/Rotate";
+// import Fade from "react-reveal/Fade";
+// import Rotate from "react-reveal/Rotate";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../redux2/actions/cartActions";
 import { deleteItem } from "../redux2/actions/productActions";
@@ -34,11 +34,11 @@ const Product = ({
       </ImageContainer>
 
       <InfoContainer>
-        <Rotate top left>
+        {/* <Rotate top left> */}
           <Link to={`/products/find/${_id}`}>
             <Title>{name}</Title>
           </Link>
-        </Rotate>
+        {/* </Rotate> */}
         <Prices>
           <Price>
             Kshs.
@@ -62,14 +62,14 @@ const Product = ({
             })}
         </Rating>
         <Company>{company}</Company>
-        <Fade left>
+        {/* <Fade left> */}
           <Description>
             {showMore ? description : description.substring(0, 63)}
             <More onClick={() => setShowMore(!showMore)}>
               {showMore ? "Show less" : "More Info"}
             </More>
           </Description>
-        </Fade>
+        {/* </Fade> */}
         {userInfo && userInfo.user?.role === "admin" && (
           <AdminButtons>
             <Link to={`/products/edit/${_id}`}>
@@ -80,7 +80,7 @@ const Product = ({
             </DeleteButton>
           </AdminButtons>
         )}
-        <Fade right>
+        {/* <Fade right> */}
           <ButtonsContainer>
             <Button cart onClick={() => addItemToCart(_id)}>
               Add To Cart
@@ -90,7 +90,7 @@ const Product = ({
               <Button check>Check</Button>
             </Link>
           </ButtonsContainer>
-        </Fade>
+        {/* </Fade> */}
       </InfoContainer>
     </Wrapper>
   );
@@ -157,10 +157,10 @@ const Price = styled.h5`
   color: #082032;
 `;
 const Span = styled.span`
-  color: #2f86a6;
+  color: black;
 `;
 const SpanTwo = styled.span`
-  color: pink;
+  color: black;
 `;
 
 const Title = styled.h6`
@@ -212,7 +212,7 @@ const Shipped = styled.h6`
   border-radius: 12px;
 `;
 const Initial = styled.h6`
-  color: #105652;
+  color: black;
   text-decoration: line-through;
   margin-left: 80px;
 `;

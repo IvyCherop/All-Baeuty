@@ -26,7 +26,9 @@ const orderRouter = require("./routes/order");
 const notFoundMiddleware = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 const { urlencoded } = require("express");
-
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+ }
 app.set("trust proxy", 1);
 app.use(
   rateLimiter({
