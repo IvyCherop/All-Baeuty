@@ -11,7 +11,7 @@ import {
 
 export const addToCart = (productId) => async (dispatch, getState) => {
   const res = await Axios.get(
-    `https://mrembo.herokuapp.com/api/v1/products/find/${productId}`
+    `https://bearyfll.herokuapp.com/api/v1/products/find/${productId}`
   );
   const productData = res.data.product;
   // console.log(productData);

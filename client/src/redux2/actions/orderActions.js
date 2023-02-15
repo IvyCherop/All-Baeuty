@@ -10,7 +10,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
   dispatch({ type: ORDER_CREATE_REQUEST, payload: order });
   try {
     const { data } = await Axios.post(
-      "https://mrembo.herokuapp.com/api/v1/orders",
+      "https://bearyfll.herokuapp.com/api/v1/orders",
       order,
       {}
     );

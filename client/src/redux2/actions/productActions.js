@@ -32,7 +32,7 @@ import {
 export const LIST_PRODUCTS = () => async (dispatch) => {
   dispatch({ type: PRODUCT_LIST_REQUEST });
   try {
-    const { data } = await axios.get("https://mrembo.herokuapp.com/api/v1/products");
+    const { data } = await axios.get("https://bearyfll.herokuapp.com/api/v1/products");
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
@@ -49,7 +49,7 @@ export const searchProducts=(searchTerm)=>async(dispatch)=>{
   dispatch({ type: PRODUCT_SEARCH_REQUEST, payload: searchTerm });
     try {
       const { data } = await axios.get(
-        `https://mrembo.herokuapp.com/api/v1/products/search?search_query=${searchTerm}`
+        `https://bearyfll.herokuapp.com/api/v1/products/search?search_query=${searchTerm}`
       );
       dispatch({ type: PRODUCT_SEARCH_SUCCESS, payload: data, searchTerm: "" });
     } catch (error) {
@@ -66,7 +66,7 @@ export const categoryProducts = (category) => async (dispatch) => {
   dispatch({ type: PRODUCTS_IN_A_CATEGORY_REQUEST, payload: category });
   try {
     const { data } = await axios.get(
-      `https://mrembo.herokuapp.com/api/v1/products/category?category=${category}`
+      `https://bearyfll.herokuapp.com/api/v1/products/category?category=${category}`
     );
     console.log(data);
     dispatch({ type: PRODUCTS_IN_A_CATEGORY_SUCCESS, payload: data });
@@ -84,7 +84,7 @@ export const getProduct = (productId) => async (dispatch) => {
   dispatch({ type: GET_PRODUCT_REQUEST, payload: productId });
   try {
     const { data } = await axios.get(
-      `https://mrembo.herokuapp.com/api/v1/products/find/${productId}`
+      `https://bearyfll.herokuapp.com/api/v1/products/find/${productId}`
     );
     dispatch({ type: GET_PRODUCT_SUCCESS, payload: data });
   } catch (error) {
@@ -96,7 +96,7 @@ export const GetCategories = () => async (dispatch) => {
   dispatch({ type: PRODUCT_CATEGORIES_REQUEST });
   try {
     const { data } = await axios.get(
-      `https://mrembo.herokuapp.com/api/v1/products/categories`
+      `https://bearyfll.herokuapp.com/api/v1/products/categories`
     );
     dispatch({ type: PRODUCT_CATEGORIES_SUCCESS, payload: data });
   } catch (error) {
@@ -112,7 +112,7 @@ export const addProduct = (product) => async (dispatch, getState) => {
   dispatch({ type: CREATE_PRODUCT_REQUEST, payload: product });
   try {
     const { data } = await axios.post(
-      "https://mrembo.herokuapp.com/api/v1/products",
+      "https://bearyfll.herokuapp.com/api/v1/products",
       product,
       {
         headers: {
@@ -136,7 +136,7 @@ export const updateItem = (product) => async (dispatch, getState) => {
   dispatch({ type: UPDATE_PRODUCT_REQUEST, payload: product });
   try {
     const { data } = await axios.put(
-      `https://mrembo.herokuapp.com/api/v1/products/find/${product.productId}`,
+      `https://bearyfll.herokuapp.com/api/v1/products/find/${product.productId}`,
 
       product,
       {
@@ -183,7 +183,7 @@ export const createReview = (product) => async (dispatch, getState) => {
   dispatch({ type: CREATE_REVIEW_REQUEST, payload: product });
   try {
     await axios.post(
-      "https://mrembo.herokuapp.com/api/v1/reviews",
+      "https://bearyfll.herokuapp.com/api/v1/reviews",
       {
         title: product.title,
         rating: product.rating,

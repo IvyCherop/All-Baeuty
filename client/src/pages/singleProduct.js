@@ -49,7 +49,7 @@ const SingleProduct = () => {
       try {
         setLoading(true);
         const res = await axios.get(
-          `http://localhost:5000/api/v1/products/find/${productId}`
+          `https://bearyfll.herokuapp.com/api/v1/products/find/${productId}`
         );
         // console.log(res.data.product);
         setLoading(false);
