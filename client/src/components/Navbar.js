@@ -39,7 +39,7 @@ const Navbar = ({ openSidebar }) => {
         </NavToggle>
         <Left>
           <Link to="/">
-            <Logo>Beauty-Full</Logo>
+            <Logo>BeautyFull</Logo>
           </Link>
         </Left>
         <Center>
@@ -168,7 +168,8 @@ const Logo = styled.h1`
   @media screen and (max-width: 800px) {
     font-weight: 700;
     letter-spacing: 1;
-    font-size: 24px;
+    font-size: 16px;
+    margin-left:10px;
   }
 `;
 const SearchContainer = styled.div`
