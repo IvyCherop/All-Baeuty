@@ -29,7 +29,7 @@ const Cart = () => {
       <BackButton
         onClick={handleClick}
         style={{
-          background: "chocolate",
+          background: "rgb(85, 81, 81)",
           position: "absolute",
           top: 60,
           right: 90,
@@ -47,10 +47,10 @@ const Cart = () => {
 const Wrapper = styled.div`
   margin-top: 0;
   max-width: 800px;
-  align-items: center;
+  align-items: stretch;
   text-align: center;
   justify-content: center;
-  margin: 0 auto;
+  margin-right: 10px;
 `;
 
 const BackButton = styled.div`
@@ -64,7 +64,7 @@ const BackButton = styled.div`
   color: whitesmoke;
   margin-right: auto;
   margin-left: auto;
-  background: crimson;
+  background: black;
   transition: all 0.5s linear;
 
   /* background:#09009B; */

@@ -26,6 +26,7 @@ const orderRouter = require("./routes/order");
 const notFoundMiddleware = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 const { urlencoded } = require("express");
+app.use(express.url_encoded({extended:false}));
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
  }
