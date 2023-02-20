@@ -25,8 +25,8 @@ const UserSchema = new mongoose.Schema({
   },
   phone:{
     type: Number,
-    required: [true, 'Please provide your phone number']
-  }
+    required: [true, 'Please provide your phone number'],
+  },
   role: {
     type: String,
     enum: ['admin', 'user','agent'],
