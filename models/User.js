@@ -23,6 +23,10 @@ const UserSchema = new mongoose.Schema({
     required: [true, 'Please provide password'],
     minlength: 6,
   },
+  phone:{
+    type: Number,
+    required: [true, 'Please provide your phone number']
+  }
   role: {
     type: String,
     enum: ['admin', 'user','agent'],

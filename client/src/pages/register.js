@@ -8,6 +8,7 @@ import Alert from "../components/Alert";
 const Register = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showAlert, setShowAlert] = useState(false);
@@ -32,7 +33,7 @@ const Register = (props) => {
     if (password !== confirmPassword) {
       alert("Password do not match!!");
     } else {
-      dispatch(register(name, email, password));
+      dispatch(register(name, email,phone, password));
     }
   };
   useEffect(() => {
@@ -61,6 +62,12 @@ const Register = (props) => {
             type="email"
             required
             placeholder="Email"
+          />
+          <Input
+            onChange={(e) => setPhone(e.target.value)}
+            type="number"
+            required
+            placeholder="Phone number"
           />
           <Input
             onChange={(e) => setPassword(e.target.value)}

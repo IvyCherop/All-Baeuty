@@ -11,15 +11,17 @@ import {
   USER_SIGNOUT,
 } from "../constants/userConstants";
 
-export const register = (name, email, password) => async (dispatch) => {
-  dispatch({ type: USER_REGISTER_REQUEST, payload: { name, email, password } });
+export const register = (name, email, phone, password) => async (dispatch) => {
+  dispatch({ type: USER_REGISTER_REQUEST, payload: { name, email, phone, password } });
   try {
     const { data } = await Axios.post(
       "https://bearyfll.herokuapp.com/api/v1/auth/register",
       {
         name,
         email,
+        phone,
         password,
+    
       }
     );
     dispatch({ type: USER_REGISTER_SUCCESS, payload: data });
